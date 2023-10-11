@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400&display=swap"
       rel="stylesheet"
+      href="https://fonts.google.com/specimen/Lexend+Deca"
     />
-    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Inter" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <link
       rel="shortcut icon"
       href="./assets/favicon-32x32.png"
@@ -18,11 +17,11 @@
     <title>Stats preview card component</title>
   </head>
   <body>
-    <main>
-      <div class="container">
+    <div class="container">
+      <main>
         <!-- HERO TEXT SECTION -->
-        <div class="hero-txt">
-          <h1>
+        <section class="left__section">
+          <h1 class="hero__text">
             Get <span class="accent">insights</span> that help your business
             grow.
           </h1>
@@ -48,21 +47,20 @@
               <p>queries</p>
             </div>
           </div>
-        </div>
+        </section>
 
         <!-- HERO IMAGE SECTION -->
-        <picture class="hero-img">
-          <source
-            media="(min-width: 768px)"
-            srcset="./assets/image-header-desktop.jpg"
-          />
+        <section class="right__section">
           <img
-            class="mobile-img"
-            src="./assets/image-header-mobile.jpg"
-            alt="Team work"
+            class="hero__img"
+            srcset="
+              ./assets/image-header-mobile.jpg   600w,
+              ./assets/image-header-desktop.jpg 1200w
+            "
+            alt=""
           />
-        </picture>
-      </div>
-    </main>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
