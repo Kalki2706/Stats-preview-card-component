@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-background: hsl(233, 47%, 7%);
+  --dark-blue: hsl(244, 38%, 16%);
+  --soft-violate: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --trans-desc-para: hsla(0, 0%, 100%, 0.75);
+  --trans-stat-para: hsla(0, 0%, 100%, 0.6);
+  --lexend: 'Lexend Deca';
+  --inter: 'Inter';
+}
+
+body {
+  margin: 0;
+  background: var(--dark-background);
+  color: var(--white);
+  display: grid;
+  place-content: center;
+  min-height: 100dvh;
+}
+
+.container {
+  padding: 2em;
+}
+
+img {
+  width: 100%;
+}
+
+/* MAIN CONTENT STYLING */
+main {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  background: var(--dark-blue);
+  border-radius: 0.375em;
+  overflow: hidden;
+  font-family: var(--inter, --lexend, sans-serif);
+}
+
+/* RIGHT__SECTION -- HERO__IMG STYLING */
+.right__section {
+  background: var(--soft-violate);
+}
+
+.hero__img {
+  display: block;
+  mix-blend-mode: multiply;
+  object-fit: cover;
+}
+
+/* LEFT__SECTION STYLING */
+.hero__text {
+  font-size: 1.75rem;
+  font-weight: 700;
+  padding: 0.75em;
+  margin-bottom: 0;
+}
+
+.accent {
+  color: var(--soft-violate);
+}
+
+.description {
+  line-height: 1.7;
+  color: var(--trans-desc-para);
+  margin-top: -2px;
+  font-size: 0.9rem;
+  padding: 0 2em;
+}
+
+h2 {
+  font: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.info p {
+  text-transform: uppercase;
+  font: 0.75rem var(--lexend, --inter, sans-serif);
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  color: var(--trans-stat-para);
+  margin: -0.125em 0 2.25em;
+}
